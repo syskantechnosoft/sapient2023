@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: com.sapient.App
+Class-Path: spring-jcl-5.0.7.RELEASE.jar spring-expression-5.0.7.RELEASE
+ .jar junit-4.11.jar spring-aop-5.0.7.RELEASE.jar spring-context-5.0.7.R
+ ELEASE.jar spring-beans-5.0.7.RELEASE.jar spring-core-5.0.7.RELEASE.jar
+  hamcrest-core-1.3.jar
+
