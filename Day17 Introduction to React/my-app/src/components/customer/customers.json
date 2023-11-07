@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "firstName":"satya",
+        "lastName":"Nadella",
+        "email":"satya.nadella@microsoft.com"
+    },
+    {
+        "id":2,
+        "firstName":"sundar",
+        "lastName":"pichai",
+        "email": "sundar.pichai@alphabet.com"
+    },
+    {
+        "id":3,
+        "firstName":"james",
+        "lastName":"ghosling",
+        "email":"james.ghosling@sun.com"
+    },
+    {
+        "id":4,
+        "firstName":"tim",
+        "lastName":"bernerslee",
+        "email":"tim.lee@html.com"
+    },
+    {
+        "id":5,
+        "firstName":"elon",
+        "lastName":"musk",
+        "email":"elon.musk@spacex.com"
+    }
+]
