@@ -1,0 +1,264 @@
+23-nov-2023
+Sprint 0
+
+Epic : To setup Microservice & UI application 
+
+
+ 
+User Story - 1: To give the documentation for the rest points created 
+Effort Estimation : 2 
+SP - 3
+AC
+____________________________________________________________________________
+
+Given the application is successfully running 
+When the application to be tested for dry run with end point /api/
+Then the swagger document to be shown for the stake holder 
+And the url http://<ipaddress>:<port>/swagger-ui.html 
+And there should be single window to list the documentation for all the microservices written 
+And the swagger document to be accessed from any system which is connected with VPN 
+
+Notes: 
+	http://1.2.3.4/8765/swagger-ui.html
+	spring fox 
+	swagger documentation 3.0 
+	https://swagger.io/specification/
+	https://restfulapi.net/richardson-maturity-model/
+
+	
+
+User Story-2: containerising the application and testing with swagger 
+Effort Estimation : 2 
+SP - 3
+AC
+____________________________________________________________________________
+Given as the number of microservices which are written  more 
+And the complexity is increased the product owner wants the containarization of the application 
+When the application needs to be deployed it should be deployed on the container 
+And the container type to be used is docker 
+Given the source code is given under https://xxx.tools.publicis.sapient.com/bitbucket/projects/xxx-xxx-xxx 
+When the build is run from Jenkins which is on the VPN IP : xxx.xxx.xxx.xxx
+Then the existing container which are running on the docker should be deleted 
+Then the build to be taken place which recretes the containers 
+And invoke any end point of the application with swagger 
+
+NOte:
+	Discovery service no to be deleted + api gateway 
+	+ DB + network 
+
+
+
+
+
+
+User Story-3: setting up quality gateway in sonarqube and excluding untested files 
+Effort Estimation : 2 
+Sp - 3
+AC
+____________________________________________________________________________
+
+Given the sonarqube is running on https://tools.publicis.sapient.com/sonar/
+When the build is completed refer: User Story-2 (containarizing the application and
+ testing with swagger )
+Then sonar report to be shown in the jenkins dashboard so that the product owner shall 
+    see how many builds have happened and sonar coverage 
+But if the coverage is less than 95% 
+Then the build should fail 
+
+
+
+
+
+
+User Story-4: creating the mongo replication and connecting the containers (docker)
+Effort Estimation : 2 
+SP - 3
+AC
+____________________________________________________________________________
+Given the application is working 
+When the database goes down for various reasons 
+Then there should be a backup of the database 
+And the database instance to be containarized 
+And the number instance to be started with 1 primary and 2 secondary 
+And MongoDB to have port numbers (27017,27018,27019) 
+And the replica set name to be sapRs 
+
+
+Note : shell script 
+	1. dev server 
+	2. prod server 1 instance mongos, 3 mongod, 2*3 replset 
+
+
+
+UserStory 5: error pipeline in MS Teams (Apply for services)
+Effort Estimation : 1
+SP - 2 
+AC: 
+____________________________________________________________________________
+Given the application is built with CI/CD (Jenkins)
+When the application build fails 
+Then the error logs to be sent to MS Teams channel Called "APP-ERROR" 
+Configure for (services / UI builds)
+
+
+
+
+
+
+User Story-6: Customer registration (UI)
+Effort Estimation : 1 
+Sp-3
+AC
+____________________________________________________________________________
+Given the web application is running on http://<ipaddress>:<port>/
+And on top right corner the link is clicked "Register" 
+Then new page to be opened which will ask for 
+    email : should be valid format of email 
+When email format is not valid (preferably use onblur)
+Then Error Message to be shown next to email field "Please enter valid email"
+And Password : should have atleast 1 special character and number of characters to be 6 
+And accept firstname and LastName which is minimum 6 characters
+And only alphabets 
+And there should be a drop down to select date for Date of Birth  (DOB)
+And ensure the DOB should be 18 Years old (assume the user is major)
+And The date filed should not be editable (ref: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date)
+And Sex to be selected as radio button from the list : MALE | FEMALE| OTHER 
+When all the fields entered are valid 
+Then submit button to be enabled
+When clicked on "Submit" button 
+Then a message to be shown "Thank You for registering with us, please verify from your registered email" 
+
+Note: Only registration shall not make customer to enter to the application 
+
+
+
+
+User Story-7: Customer registration (Service)
+Effort Estimation : 1 
+SP - 2
+AC
+____________________________________________________________________________
+Given the  application is running on http://<ipaddress>:<port>/
+When the end point is POST /api/registration 
+Then the payload to be accepted is 
+	{
+		email:String, 
+		password: String, 
+		firstName: String, 
+		lastName: String, 
+		dob:date, 
+	} 
+When made a request with Postman/ rest client / swagger 
+Then the data model to be shown which is created with ID 
+And with status code 201 
+
+
+
+
+
+____________________________________________________________________________
+
+
+User Story-8: Creating UX design (Figma/Any UX Tool)
+Effort Estimation :2
+Sp - 5
+
+Title- UI: Design the wireframes and mock-ups for each page 
+Description: Designing the wireframes and mockups for each page 
+AC: 
+Given a list of pages: 
+-        Customer Page Registration
+-        Customer Home Page
+-        All Accounts View Page 
+-        Amount Transfer Page
+-        Dashboard 
+-        Home Page-Welcome Page
+-        Customer profile page 
+- 		 Update Customer Page 
+
+Create wireframes and mock-ups for each of the pages for all screen sizes 
+
+And the design should be coherent with the style guide 
+
+
+
+
+____________________________________________________________________________
+ 
+User Story-9: Setup Quality gate way on PS Bitbucket 
+Effort Estimation :2
+SP- 3
+
+
+When the applicaiton is written the same application has to check for 
+the valid test case and code coverage report to be generated, for the same, 
+setup sonar qube for the application and the code coverage to be reflected in
+ the bitbucket of PS 
+
+
+
+____________________________________________________________________________
+ 
+User Story-10: Create reactjs application with atom molecule organism design system 
+react js application 
+Effort Estimation :2
+SP-3
+
+Create a ReactJS application which shall adhere to atom molecule
+ organism design system react js application, and seed on 
+the bitbucket as a scafolded version and run a simple test case using Testing Library 
+
+
+____________________________________________________________________________
+ 
+User Story-11: Create Spring Boot application for User, Account, Transaction 
+and write simple test case 
+Effort Estimation :2
+Sp - 3
+
+Create spring boot application which shall have the basic end point of /api/ 
+which shall give a acknowledgement as "up", 
+and seed the same to the bitbucket repository. 
+
+Note: 
+1. you are expected to have all the microservices registered under discovery service + API Gateway 
+2. Use Java 17 
+3. Spring book 3.0.13 
+4. Create Branching for the same dev, test, prod 
+5. .gitignore 
+
+
+
+
+
+
+____________________________________________________________________________
+ 
+User Story-12: setup husky for react js application 
+Effort Estimation :1
+SP - 3
+
+since the application is build at large scale it is very 
+important the developers shall keep the code clean in this regard you are 
+expected to setup husky 
+
+Refer: https://www.npmjs.com/package/husky
+
+Notes: 
+	1. reactjs with typescript 
+	2. create react-app your-app 
+	3. Create Branching for the same dev, test, prod
+
+
+
+
+
+
+
+
+
+
+
+
+
+
