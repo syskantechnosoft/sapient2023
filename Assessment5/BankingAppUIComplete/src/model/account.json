@@ -1,0 +1,74 @@
+[
+  {
+    "id": 100,
+    "accountNumber": "SB1000231",
+    "accountType": "SAVINGS",
+    "balance": 7000,
+    "interestRate": 4.5,
+    "customerId": 1
+  },
+  {
+    "id": 101,
+    "accountNumber": "CA5000453",
+    "accountType": "CURRENT",
+    "balance": 2500000,
+    "interestRate": 1.5,
+    "customerId": 1
+  },
+  {
+    "id": 102,
+    "accountNumber": "SB1000987",
+    "accountType": "SAVINGS",
+    "balance": 75000,
+    "interestRate": 4.5,
+    "customerId": 2
+  },
+  {
+    "id": 103,
+    "accountNumber": "LA7000543",
+    "accountType": "LOAN",
+    "balance": 300000,
+    "interestRate": 7.5,
+    "customerId": 3
+  },
+  {
+    "id": 100,
+    "accountNumber": "SB1000231",
+    "accountType": "SAVINGS",
+    "balance": 7000,
+    "interestRate": 4.5,
+    "customerId": 2
+  },
+  {
+    "id": 100,
+    "accountNumber": "SB1000231",
+    "accountType": "SAVINGS",
+    "balance": 7000,
+    "interestRate": 4.5,
+    "customerId": 1
+  },
+  {
+    "id": 100,
+    "accountNumber": "SB1000231",
+    "accountType": "SAVINGS",
+    "balance": 7000,
+    "interestRate": 4.5,
+    "customerId": 1
+  },
+  {
+    "id": 100,
+    "accountNumber": "SB1000231",
+    "accountType": "SAVINGS",
+    "balance": 7000,
+    "interestRate": 4.5,
+    "customerId": 1
+  },
+  {
+    "id": 100,
+    "accountNumber": "SB1000231",
+    "accountType": "SAVINGS",
+    "balance": 7000,
+    "interestRate": 4.5,
+    "customerId": 1
+  }
+]
