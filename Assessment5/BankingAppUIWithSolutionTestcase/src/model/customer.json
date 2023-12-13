@@ -1,0 +1,57 @@
+[
+    {
+        "id":1,
+        "firstName":"satya",
+        "lastName":"Nadella",
+        "email":"satya.nadella@microsoft.com",
+        "mobile":9878987867,
+        "address":"234,Gachibowli",
+        "city" : "hyderabad",
+        "state" : "Telengana",
+        "country":"India"
+    },
+    {
+        "id":2,
+        "firstName":"sundar",
+        "lastName":"pichai",
+        "email": "sundar.pichai@alphabet.com",
+        "mobile":9878987867,
+        "address":"7A,Humming Gardens",
+        "city" : "Chennai",
+        "state" : "TamilNadu",
+        "country":"India"
+    },
+    {
+        "id":3,
+        "firstName":"james",
+        "lastName":"ghosling",
+        "email":"james.ghosling@sun.com",
+        "mobile":9878987867,
+        "address":"87,Spring Chill",
+        "city" : "Calgary",
+        "state" : "Alberta",
+        "country":"Canada"
+    },
+    {
+        "id":4,
+        "firstName":"tim",
+        "lastName":"bernerslee",
+        "email":"tim.lee@html.com",
+        "mobile":9878987867,
+        "address":"69,web wide walley",
+        "city" : "South Hampton",
+        "state" : "London",
+        "country":"England"
+    },
+    {
+        "id":5,
+        "firstName":"elon",
+        "lastName":"musk",
+        "email":"elon.musk@spacex.com",
+        "mobile":9878987867,
+        "address":"234,Gachibowli",
+        "city" : "Pretoria",
+        "state" : "Transvaal",
+        "country":"South Africa"
+    }
+]
